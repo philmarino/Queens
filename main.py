@@ -32,10 +32,7 @@ regions = [
     ]
 
 def valid(locations):
-    #if any are in the same row, it is invalid
-    #print(locations[0])
     for comb in combinations(locations, 2):
-        #print(comb)
         if comb[0][0] == comb[1][0]:
             return False #same row
         if comb[0][1] == comb[1][1]:
@@ -46,7 +43,6 @@ def valid(locations):
     #otherwise, it is valid
     return True
 
-#print(len(regions))
 for a in regions[0]:
     for b in regions[1]:
         for c in regions[2]:
